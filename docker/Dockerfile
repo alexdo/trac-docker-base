@@ -2,7 +2,10 @@ FROM python:2-slim
 
 ENV TRAC_VERSION=1.2.3
 
-RUN apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get -y -qq install locales subversion gcc git-core
+RUN apt-get -qq update \
+	&& DEBIAN_FRONTEND=noninteractive apt-get -y -qq install locales subversion gcc git-core \
+	&& rm -r /var/lib/apt/lists /var/cache/apt/archives
+
 RUN sed -i -e 's/# de_DE.UTF-8 UTF-8/de_DE.UTF-8 UTF-8/' /etc/locale.gen && \
     locale-gen
 ENV LANG de_DE.UTF-8  
