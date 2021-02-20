@@ -1,6 +1,6 @@
 # Trac base image for Docker
 
-This image contains Trac 1.2.3. Use it either to run a very basic trac
+This image contains Trac 1.4.2. Use it either to run a very basic trac
 instance or as a base to extend from.
 
 The image is created from python:2-slim and is about 320MB in size.
