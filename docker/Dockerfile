@@ -1,6 +1,6 @@
 FROM python:2-slim
 
-ENV TRAC_VERSION=1.4.2
+ENV TRAC_VERSION=1.4.3
 
 RUN apt-get -qq update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get -y -qq install locales subversion gcc git-core libpq-dev \
